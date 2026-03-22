@@ -114,18 +114,18 @@ window.addEventListener('scroll', function() {
 
 // Hamburger Menu
 const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+const navLinksMenu = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.innerHTML = navLinks.classList.contains('active') 
+    navLinksMenu.classList.toggle('active');
+    hamburger.innerHTML = navLinksMenu.classList.contains('active') 
         ? '<i class="fas fa-times"></i>' 
         : '<i class="fas fa-bars"></i>';
 });
 
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+        navLinksMenu.classList.remove('active');
         hamburger.innerHTML = '<i class="fas fa-bars"></i>';
     });
 });
